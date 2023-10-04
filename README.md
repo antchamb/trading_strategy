@@ -24,3 +24,19 @@ Strategy 4: Protective call
   Short S0 + Buy a Call (out or at the money)
   Outlook on Spot: bearish
   Function:   S0 - K - p < protective_call < S0 - p
+
+Strategy 5: Bull Call Spread
+  (1) Long Call close to at the money + (2) Short Call out of the money
+  K1 = S0, K2 > S0
+  Outlook on Spot: bullish
+  Function: p2 - p1 < bull_call_spread < K2 - K1 - p1 + p2
+
+Strategy 6: Bull Put Spread
+  (1) Long out of the money Put + (2) Short out of the money Put
+  K2 > K1
+  outlook on Spot: bullish
+  Function: K1 - K2 - p1 + p2 < bull_put_spread < p2 - p1
+
+Strategy 7: Bear Call Spread
+  (1) Long out of the money call + (2) Short out of the money Call
+  
