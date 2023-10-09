@@ -1,6 +1,12 @@
 # trading_strategy
 This repository purpose is to have a function for each trading strategy that I know. Trading strategy knowledge is the first step to have a better understanding of HFT possibilities.
 
+Notation:
+S: Spot
+S0:  spot at time 0
+K: strike price
+p : premium
+
 Strategy 1: Covered Call
   Type: conservative
   Buy S0 + Write a Call <=> Write a Put
@@ -39,4 +45,39 @@ Strategy 6: Bull Put Spread
 
 Strategy 7: Bear Call Spread
   (1) Long out of the money call + (2) Short out of the money Call
-  
+  outlook on Spot: bearish
+  payoff interval: [K2 - K1 + p2 - p1 ; p2 - p1]
+
+Straregy 8: Bear Put Spread
+(1) Long at the money Put + (2) short out of the money put with K2 < K1
+outlook: bearish
+payoff interval: [p2 - p1 ; K1 - K2 + p2 - p1]
+
+Strategy 9: Long Synthetic Forward
+(1) buy at the money Call + (2) sell at the money put
+outlook: bullish
+payoff interval: [p2 - p1 + K ; +∞[
+
+Strategy 10: Short Synthetic Forward
+(1) buy a put + (2) sell a call
+at the money for 1 and 2
+outlook: bearish
+payoff interval: ]-∞ ; K + p2 - p1]
+
+Strategy 11: Long Combo
+(1) buy out of the money Call + (2) sell out of the money Put
+outlook: bullish
+payoff interval: [p2 - p1 + K2 ; +∞[
+
+Strategy 12: Short Combo
+(1) Buy out of the money Put + (2) short out of the money Call
+outlook: bearish
+payoff interval: ]-∞ ; K1 + p2 - p1]
+
+Strategy 13: Bull Call Ladder
+(1) long at the money Call + (2) short out of the money Call + (3) short out of the money Call
+K3 >  K2 > K1
+outlook: neutral/bullish
+
+
+
