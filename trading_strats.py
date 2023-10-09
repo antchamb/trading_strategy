@@ -27,3 +27,5 @@ def bull_put_spread(S0, S, K1, K2, p1, p2):
     #K1 < K2  and p2 > p1
     return np.max(K1-S, 0) - np.max(K2 - S,0) - p1 + p2
 
+def test(r):
+    return r*90
