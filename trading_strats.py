@@ -58,8 +58,14 @@ def bear_call_ladder(S, K1, K2, K3, p1, p2, p3):
 def bear_put_ladder(S, K1, K2, K3, p1, p2, p3):
     return np.max(K1-S,0) - np.max(K2-S,0) - np.max(K3-S,0) + p2 + p3 - p1
 #17
-def calendar_call_spread(S1, S2, Stop, K, p1 , p2):
-    if S < Stop:
-return 
-
+def long_straddle(S, K, p1 , p2):
+    return np.max(S-K,0) + np.max(K-S,0) - p1 - p2
+#18
+def long_strangle(S, K1, K2, p1, p2):
+    return np.max(S-K1,0) + np.max(K2-S,0) - p1 - p2
+#24
+def long_put_synthtetic_straddle(S0, S, K1, K2, p1, p2):
+    return S - S0 + np.max(K1-S,0) + np.max(K2-S,0)
+#25
+def short_call
 

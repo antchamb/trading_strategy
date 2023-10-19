@@ -98,7 +98,46 @@ Strategy 16: Bear Put Ladder
   outlook on Spot: neutral
   payoff interval: [ K1 - K2 - K3 + p2 + p3 - p1 ; K1 - K2 + p2 + p3 - p1]
 
-Strategy 17: Calendar Call Spread
-  (1) long Call + (2) short Call
-  K1 = K2 ; T1 > T2
-  outlook on Spot: neutral/bullish
+Strategy 17: Long Straddle
+  volatility strategy
+  (1) long out of the money Call + (2) long at the money Put
+  outlook on Spot: market move
+  payoff interval: [ - p1 - p2 ; +∞ [
+  
+Strategy 18: Long Strangle
+  volatility strategy
+  (1) long out of the money call + (2) long out of the money Put
+  outlook on Spot: market move
+  payoff interval: [ - p1 - p2 ; +∞ [
+
+Strategy 20: Long Guts
+  (1) long in the money Call + (2) long in the money Put
+  more expensive than Long Straddle
+  outlook on Spot: Neutral
+  same function as long straddle
+
+Strategy 21: Short Straddle
+  (1) short at the money Call + short at the money Put
+  outlook on spot: neutral
+  payoff_function : - long_straddle
+
+Strategy 22: Short Strangle
+  (1) short out of the money Call + (2) short out of the money Put
+  outlook on Spot: neutral
+  payoff_function = -long_strangle
+
+Strategy 23: Short Guts
+  more expensive than Short straddle
+  outlook on Spot: neutral
+  same payoff funciton
+
+Strategy 24: Long Put Synthetic Straddle
+  buy S0 + (1) long at the money Put / the nearest in the money + (2) long at the money Put / the nearest in the money
+  capital gain strategy
+  outlook on Spot: neutral
+
+  
+Strategy 25: Short Call Synthetic Straddle
+ 
+  buy S0 + (1) short at the money Call / the nearest in the money +  short at the money Call / the nearest in the money
+  outlook on Spot: 
